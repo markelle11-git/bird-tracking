@@ -10,6 +10,12 @@ const colors = rainbow.generate(10, { lum: 50, sat: 75, rgb: true }).map(c =>
 
 export const speciesList = [
   {
+    name: 'Cygnus columbianus',
+    name_en: 'Tundra Swan',
+    name_fr: 'Tundra Swan',
+    type: 'raptor',
+  },
+  {
     name: 'Aegypius monachus',
     name_en: 'Cinereous vulture',
     name_fr: 'Vautour moine',
