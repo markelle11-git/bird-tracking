@@ -11,10 +11,10 @@ def parseFile(file):
             reader = csv.DictReader(csvfile, delimiter=",", quotechar='"')
             rows = [
                 {
-                    "id": int(row["occurrenceID"]),
+                    "id": int(str(row["occurrenceID"])),
                     "species": row["species"],
                     "coord": [float(row["longitude"]), float(row["latitude"])],
-                    "time": row["date"],
+                    "time": datetime.datetime.strptime(row["date"],  "%Y-%m-%d %H:%M:%S").strftime("%Y-%m-%dT%H:%M:%S")
                 }
                 for row in reader
                 if row["longitude"] and row["latitude"]
